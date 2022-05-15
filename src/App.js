@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {useState} from "react";
+import {Loader} from "./components/Loader";
+//import {Switch} from 'react-router';
+import {Route, Routes} from 'react-router-dom';
+import Header from "./components/Header";
+import SearchBar from './components/SearchBar';
+import SideBar from "./components/SideBar";
+import DefaultMain from "./components/DefaultMain";
+import Chat from './components/Chat';
 function App() {
-  return (
+  const [loaded, setLoaded] = useState(true);
+  return !loaded ? <Loader/> : (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="Main">
+            <div className='left-side'>
+                <Header/>
+                <SearchBar/>
+                <SideBar/>
+            </div>
+            <div className='right-side'>
+                <Routes>
+                    <Route path='/' element={<DefaultMain/>}/>
+                    <Route path='/chat/:id' element={<Chat/>}/>
+                </Routes>
+            </div>
+        </div>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.main{
+    width: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+.main--text{
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main--text_first{
+    font-size: 32px;
+    margin: 0 auto;
+    color: #41525d;
+}
+.main--text_second{
+    margin: 10px auto 0;
+    text-align: center;
+    color: #667781;
+}
