@@ -2,6 +2,10 @@
     flex-grow: 1;
     background-color: white;
 }
+.sidebar--link{
+    text-decoration: none;
+    color: inherit;
+}
 .sidebar--table{
     list-style: none;
     margin: 0;
@@ -15,6 +19,7 @@
     display: flex;
     cursor: pointer;
     background-color: white;
+    transition: background-color 0.2s ease;
 }
 .sidebar--table_item:hover{
     background-color: #f5f6f8;
@@ -40,7 +45,25 @@
 .sidebar--table_item-main--name{
     width: inherit;
     font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar--table_item-main--name--date{
+    font-size: 10px;
+    color:#6f6f72;
 }
 .sidebar--table_item-main--message{
+    display: flex;
+    justify-content: space-between;
     color: #6f6f72;
+}
+.sidebar--table_item-main--message--arrow{
+    visibility: hidden;
+    position: relative;
+    right: -10px;
+}
+.sidebar--table_item:hover  .sidebar--table_item-main--message--arrow{
+    visibility: visible;
+    transform: translateX(-10px);
+    transition-duration: 0.1s;
 }
