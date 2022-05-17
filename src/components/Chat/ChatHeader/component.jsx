@@ -1,8 +1,8 @@
 import './ChatHeader.css'
-import Icon from "../Icon/component";
-import contacts from "../../utils/contacts";
+import Icon from "../../Icon/component";
+import contacts from "../../../utils/contacts";
 import {useContext} from "react";
-import ContactIdContext from "../../context/contactIdContext";
+import ContactIdContext from "../../../context/contactIdContext";
 import {Navigate} from 'react-router-dom';
 export const ChatHeader = () => {
     const ctx = useContext(ContactIdContext);
