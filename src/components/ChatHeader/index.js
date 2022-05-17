@@ -1,0 +1,1 @@
+export {ChatHeader as default} from './component'

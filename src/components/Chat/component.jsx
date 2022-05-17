@@ -1,4 +1,7 @@
-
+import "./Chat.css"
+import ChatHeader from "../ChatHeader";
 export const Chat = () => {
-    return <div className="chat">this is a chattttt {window.location.pathname}</div>
+    return <div className="chat">
+        <ChatHeader/>
+    </div>
 }

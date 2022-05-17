@@ -3,15 +3,17 @@ import contacts from '../../utils/contacts'
 import logo from '../../assets/icons/logo.jpeg'
 import Icon from "../Icon/component";
 import {Link} from "react-router-dom";
-
+import {useContext} from "react";
+import ContactIdContext from "../../context/contactIdContext";
 export const SideBar = () => {
+    const [_, setIndex] = useContext(ContactIdContext);
     return <div className="sidebar">
         <ul className="sidebar--table">
             {
                 contacts.map((item, index) => {
                     const arr = Object.keys(item.messages);
                     return (
-                        <Link to={'/chat/' + index} className="sidebar--link" onClick={() => {window.load();}}>
+                        <Link to={'/chat/' + index} className="sidebar--link" onClick={() => {setIndex(index)}}>
                             <li key={index} className="sidebar--table_item">
                                 <div className="sidebar--table_item-icon"><Icon src={logo} height="49px" width="49px"/></div>
                                 <div className={index ? "sidebar--table_item-main" : "sidebar--table_item-main sidebar--table_item-main_first"}>
