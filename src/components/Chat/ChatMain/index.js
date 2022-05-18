@@ -1,0 +1,1 @@
+export {ChatMain as default} from './component'
