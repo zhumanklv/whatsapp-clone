@@ -4,3 +4,55 @@
     padding: 10px 16px;
     background-color: #f0f2f5;
 }
+.chat-footer--inner{
+    height: 39px;
+    width: 100%;
+    display: flex;
+}
+.chat-footer--emoji-outer{
+    height: 42px;
+    width: 26px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat-footer--emoji{
+    width: 24px;
+    height: 24px;
+}
+.chat-footer--attach-outer{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.chat-footer--attach{
+    width: 24px;
+    height: 24px;
+}
+.chat-footer--message-outer{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: white;
+}
+.chat-footer--message{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.chat-footer--micro-outer{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.chat-footer--micro{
+    width: 24px;
+    height: 24px;
+}
